@@ -1,20 +1,248 @@
-.left {
-    width: 800px;
+@import 'colors';
 
-    .left_header {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
-        button {
-            width: calc(100% / 2 - 40px);
-            height: 60px;
-            background-color: $gray;
-            color: $white;
-            font-size: 28px;
-            text-align: center;
+
+    .willchange {
+         grid-area: 2 / 1 / 6 / 4;
+
+        .corruntWeather {
+            display: flex;
+            background-color: $white;
             border-radius: 10px;
+            padding: 30px;
+    
+            .left {
+                height: auto;
+                width: calc(60%);
+                border-right: 2px solid $light_gray;
+                .main {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 50px;
+                    .view_weather img {
+                        width: 100px;
+                        height: 100px;
+                    }
+        
+                    .view_weather p, .temperature p {
+                        font-size: 20px;
+                        text-align: center;
+                    }
+        
+                    .temperature  h2{
+                        text-align: center;
+                        font-size: 50px;
+                        color: $red;
+                        margin: 20px 0 25px;
+                    }
+                }
+                h3 {
+                    font-size: 24px;
+                    color: $red;
+                }
+            }
+    
+            .right {
+                width: 40%;
+                ul {
+                    height: 100%;
+                    margin-left: 50px;
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    font-weight: 500;
+                    
+                    li {
+                        position: relative;
+                        span {
+                            color: $red;
+                            position: absolute;
+                            left: 100px;
+                        }
+                    }
+                    
+                }
+            }
+    
+            
+    
+            
+    
+        
         }
 
+        .nearPlaces {
+            margin-top: 50px;
+            background-color: $white;
+            padding: 30px;
+            border-radius: 10px;
+    
+            h3 {
+                font-size: 24px;
+                color: $red;
+            }
+            
+            .cities {
+                margin: 25px 0 25px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 50px;
+            }
+    
+            .city {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 20px;
+                height: 80px;
+                border-radius: 20px;
+                border: 1px solid $light_gray;
+                width: calc(100% / 2 - 50px);
+                p, .temp {
+                    font-size: 20px;
+                }
+    
+                .temp {
+                    display: flex;
+                    align-items: center;
+    
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 20px;
+                    }
+    
+                }
+    
+                
+            }
+        }
     }
-   
-}
+    .weather_all_day {
+        grid-area: 1 / 4 / 6 / 6;
+        background-color: $white;
+        border-radius: 10px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        .heder {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h4, p {
+                font-size: 24px;
+                font-weight: 500;
+            }
+    
+            h4 {
+                color: $red;
+            }
+        }
+        .hours {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+    
+            .hour {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 20px;
+                padding: 15px 0 25px 0;
+                position: relative;
+        
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $red;
+                    position: absolute;
+                    left: 41%;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+        
+            }
+        
+            .hour:not(:last-child) {
+                border-bottom: 2px solid $light_gray;
+            }
+        
+        }
+    
+    }
+ 
+     @media screen and (max-width: 1070px){
+        .willchange {
+        .corruntWeather {
+            flex-direction: column;
+            padding: 20px;
+            .left {
+                width: 100%;
+                border-right: none;
+                padding-bottom: 20px;
+                border-bottom: 2px solid $light_gray;
+                h3 {
+                    font-size: 16px;
+                }
+                .main {
+                    .view_weather, .temperature {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                    .view_weather img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .view_weather p, .temperature p {
+                        font-size: 14px;
+                    }
+        
+                    .temperature  h2{
+                        font-size: 40px;
+                    }
+                }
+            }
+            .right {
+                width: 100%;
+                margin-top: 20px;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    justify-content: space-between;
+                    margin-left: 30px;
+                    font-size: 12px;
+                    li {
+                        width: calc(100% / 2 - 40px);
+    
+                    }
+                }
+            }
+        }  
+        
+        .nearPlaces {
+             h3 {
+                font-size: 16px;
+             }
+            .cities {
+    
+            .city {
+                width: 100%;
+                
+                p, .temp div {
+                    font-size: 16px;
+                }
+            }
+        }}
+    }}

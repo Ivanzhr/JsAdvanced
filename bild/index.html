@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
             <h3>Weather_ez</h3>
             <div class="line"></div>
             <input type="text" placeholder="Please enter the city">
+            <img src="img/search.svg" alt="" class="search">
         </header>
         <main>
-            <div class="left">
-                <div class="left_header">
-                    <button class="active">Today</button>
-                    <button>5-day forecast</button>
-                </div>
-                <div class="corruntWeather">
-                    <section class="left">
-                        <p>CURRENT WEATHER</p>
-                        <div></div>
-                    </section>
-                    <section class="right"></section>
-                </div>
-                <div class="nearPlaces">
-                    <section class="left"></section>
-                    <section class="right"></section>
-                </div>
+            <div class="buttons">
+                <button class="active">Today</button>
+                <button>5-day forecast</button>
             </div>
-            <div class="right">
-                <div class="hourly"></div>
+            <div class="willchange">
+                
             </div>
-            
+            <div class="weather_all_day">
+                <div class="heder">
+                    <h4>HOURLY</h4>
+                    <p class="date"></p>
+                </div>
+                <div class="hours"></div> 
+
+            </div>
+
         </main>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
+
 </html>

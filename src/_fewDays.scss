@@ -1,0 +1,147 @@
+@import 'colors';
+
+.daily_weather {
+    .today, .day {
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    .today{
+        height: auto;
+        border: 2px solid #000;
+        #first {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            h2 {
+                font-size: 60px;
+                line-height: 73px;
+                text-align: center;
+                color: $red;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    .days {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        border-top: 2px solid $red;
+        padding-top: 25px;
+        .day {
+            display: flex;
+            width: calc(100% / 2 - 25px);
+            height: auto;
+            cursor: pointer;
+            .left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .right {
+                
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                .hight_low_temp {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+#how_day {
+    font-size: 24px;
+    line-height: 30px;
+    color: $red;
+}
+
+#day_date, .date {
+    font-size: 32px;
+    line-height: 39px;
+}
+
+@media screen and (max-width: 1070px){
+    .daily_weather {
+    .today {
+        position: relative;
+        justify-content: space-around;
+        #first {
+            position: absolute;
+            top: -20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+        }
+        section {
+            margin-top: 30px;
+            h2 {
+                font-size: 40px;
+            } 
+
+            p {
+                font-size: 14px;
+            }
+        }
+        section:last-child {
+            display: none;
+        }
+    }
+
+    .days {
+        .day {
+            flex-direction: column;
+            .left {
+                flex-direction: row;
+            }
+            .right {
+                display: flex;
+                justify-content: space-between;
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+                .hight_low_temp {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    #how_day {
+        font-size: 16px;
+    }
+    #day_date, .date {
+        font-size: 20px;
+    }
+}}

@@ -1,0 +1,59 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+@import 'today';
+@import 'fewDays';
+@import 'error';
+
+// $gray: #393E41;
+// $red: #E94F37;
+// $light_gray: #DDDDDD;
+// $white: #fff;
+
+
+// .wrapper {
+//     width: 90%;
+//     height: 940px;
+//     margin: auto;
+//     padding: 50px;
+//     background-color: $light_gray;
+// }
+
+// header {
+//     height: 50px;
+//     display: flex;
+//     justify-content: space-between;
+//     h3{
+//         color: $red;
+//         font-size: 40px;
+//     }
+
+//     .line {
+//         width: 570px;
+//         height: 27px;
+//         border-bottom: 2px solid $gray;
+//     }
+
+//     input {
+//         width: 400px;
+//         height: 50px;
+//         border: 1px solid $gray;
+//         border-radius: 10px;
+//         padding: 10px;
+//     }
+// }
+
+// section {
+//     background-color: $white;
+//     border-radius: 10px;
+//     padding: 40px;
+// }
+
+// .active {
+//     border: 4px solid $red;
+// }

@@ -1,0 +1,20 @@
+.left {
+    width: 800px;
+
+    .left_header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        button {
+            width: calc(100% / 2 - 40px);
+            height: 60px;
+            background-color: $gray;
+            color: $white;
+            font-size: 28px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+    }
+   
+}
